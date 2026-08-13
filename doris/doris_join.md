@@ -1,4 +1,7 @@
 # Apache Doris Join 体系完整梳理（层级清晰版）
+
+官方文档：[Doris Join](https://doris.apache.org/zh-CN/docs/dev/query-acceleration/colocation-join?_highlight=colocate)
+
 先明确**两层级划分**，避免概念混淆：
 - **第一层：单机物理执行算子** —— 单节点上具体怎么做关联计算，官方仅实现 2 种：**Hash Join、Nested Loop Join**
 - **第二层：分布式数据分布策略** —— 多节点间如何把数据凑到一起再执行Join，共 4 种：**Colocate Join、Bucket Shuffle Join、Broadcast Join、Shuffle Join**
